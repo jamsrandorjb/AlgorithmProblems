@@ -1,5 +1,12 @@
 package hackerrank;
 
+/**
+ * problem url: https://www.hackerrank.com/challenges/java-factory/problem
+ * solved by jama
+ */
+
+
+
 import java.util.*;
 import java.security.*;
 
