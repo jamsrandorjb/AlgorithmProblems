@@ -2,6 +2,7 @@ package hackerrank;
 
 /**
  * problem url: https://www.hackerrank.com/challenges/grading/problem
+ * hackerrank profile url:  https://www.hackerrank.com/jamsrandorjb?hr_r=1
  * solved by jama
  */
 

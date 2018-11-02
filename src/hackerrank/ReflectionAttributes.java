@@ -6,6 +6,7 @@ import java.util.Collections;
 
 /**
  * problem url: https://www.hackerrank.com/challenges/java-reflection-attributes/problem
+ * hackerrank profile url:  https://www.hackerrank.com/jamsrandorjb?hr_r=1
  * solved by jama
  */
 
