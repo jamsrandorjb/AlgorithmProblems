@@ -4,6 +4,13 @@ import java.util.ArrayList;
 
 import java.util.List;
 
+
+/**
+* Roman to Integer
+* problem url: https://leetcode.com/problems/combination-sum/
+* leetcode profile url:  https://leetcode.com/jamsrandorj/
+ * solved by jama
+*/
 public class CombinationSum {
 	public static void main(String[] args) {
 		int[] intArray = new int[]{ 1,8,6,2,5,4,8,3,7 }; 
