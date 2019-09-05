@@ -2,7 +2,7 @@ package leetcode;
 import java.util.ArrayList;
 
 /*
-* Reverse Integer
+* RemoveElement
 * problem url: https://leetcode.com/problems/remove-element/
 * leetcode profile url:  https://leetcode.com/jamsrandorj/
 * solved by jama
