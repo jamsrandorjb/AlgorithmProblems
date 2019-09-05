@@ -5,8 +5,6 @@ package leetcode;
 * problem url: https://leetcode.com/problems/reverse-integer/
 * leetcode profile url:  https://leetcode.com/jamsrandorj/
 * solved by jama
-* pretty ugly solution but it does the job
-* gonna improve it soon
 */
 
 public class ReverseInteger {
@@ -16,27 +14,28 @@ public class ReverseInteger {
 	}
 	
 	public static int reverse(int x) {
-        boolean checkNegative = x < 0 ? true : false;
-        x = x < 0 ? 0 - x : x;
-        
-        //declaring String s to hold the string value of input x
-        String s = "" + x;
-        //declaring String result to hold reversed string
-        String result = "";
-        
-        //reversing the string
-        for(int i = 0; i < s.length(); i++){
-            result += s.charAt(s.length()-1-i);
-        }
-        
-        //returning the reversed string as an Integer
-        try
-        {
-            return checkNegative ?  0 - Integer.parseInt(result) : Integer.parseInt(result) ;
-        }
-        catch(NumberFormatException e)
-        {
-            return 0;
-        }
+		
+		boolean checkNegative = false;
+		int result = 0;
+		
+		//checking if the x is negative
+		//if yes we have to do some calculations here and there
+		if(x < 0) {
+			checkNegative = true;
+			x = 0 - x;
+		}
+		
+		while(x != 0) {
+			result = result * 10 + x % 10;
+			x = x / 10;
+		}
+		
+		if(checkNegative) result = 0 - result;
+		
+		if (result < Integer.MIN_VALUE || result > Integer.MAX_VALUE) {
+			return 0;
+		}
+		
+        return result;
     }
 }
