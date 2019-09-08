@@ -18,15 +18,21 @@ public class MoveZeroes {
 		}
 	}
 	public static void moveZeroes(int[] nums) {
-		for(int i = 0; i < nums.length; i++)
+		//declaring variable to track lastIndex where the zero is
+		int zeroPointer = -1;
+        
+        for(int i = 0; i < nums.length; i++)
         {
-        	if(nums[i] == 0)
-        	{
-        		for(int j = i; j < nums.length - 1; j++) {
-        			int tempPointer = nums[j];
-                	nums[j] = nums[j+1];
-                	nums[j+1] = tempPointer;
-                }	
+        	//zero is occurring the first time
+        	if(nums[i] == 0 && zeroPointer == -1){
+                zeroPointer = i;
+            }
+        	//non zero is occurring, swap and increment the tracker
+        	else if(nums[i] != 0 && zeroPointer != -1)
+            {
+                nums[zeroPointer] = nums[i];
+                nums[i] = 0;
+                zeroPointer++;
         	}	
         }
     }
