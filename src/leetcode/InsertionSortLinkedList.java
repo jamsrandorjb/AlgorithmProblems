@@ -7,13 +7,6 @@ package leetcode;
  * solved by jama
 */
 
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode(int x) { val = x; }
-}
-
-
 public class InsertionSortLinkedList {
 	
 	public static void main(String[] args) {
