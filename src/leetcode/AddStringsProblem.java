@@ -4,8 +4,8 @@ import java.util.Iterator;
 import java.util.Stack;
 
 /*
-* Add Two Linked Lists numbers
-* problem url: https://leetcode.com/problems/add-two-numbers/
+* Add Strings
+* problem url: https://leetcode.com/problems/add-strings/
 * leetcode profile url:  https://leetcode.com/jamsrandorj/
 * solved by jama
 */
