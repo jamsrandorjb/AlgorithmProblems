@@ -1,8 +1,8 @@
 package leetcode.tree;
 
 /*
-* 144. Binary Tree Preorder Traversal
-* problem url: https://leetcode.com/problems/binary-tree-preorder-traversal/
+* 98. Validate Binary Search Tree
+* problem url: https://leetcode.com/problems/validate-binary-search-tree/
 * leetcode profile url:  https://leetcode.com/jamsrandorj/
 * solved by jama
 */
