@@ -1,12 +1,5 @@
 package leetcode.backtracking;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-
 /**
 * 1219. Path with Maximum Gold
 * problem url: https://leetcode.com/problems/path-with-maximum-gold/
