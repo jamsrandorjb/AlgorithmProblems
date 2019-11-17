@@ -1,4 +1,6 @@
-package leetcode;
+package leetcode.heap;
+
+import leetcode.ListNode;
 
 /*
 * Merge K Sorted Lists
