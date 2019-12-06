@@ -5,10 +5,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 
-/**
- * 1268. Search Suggestions System problem url:
- * https://leetcode.com/problems/search-suggestions-system/ leetcode profile
- * url: https://leetcode.com/jamsrandorj/ solved by jama
+/*
+ * 1268. Search Suggestions System  
+ * problem url: https://leetcode.com/problems/search-suggestions-system/ 
+ * leetcode profile: https://leetcode.com/jamsrandorj/ 
+ * solved by jama
  */
 public class SuggestedProducts {
 	public static void main(String[] args) {
@@ -46,5 +47,5 @@ public class SuggestedProducts {
 		}
 
 		return result;
-	}	
+	}
 }
