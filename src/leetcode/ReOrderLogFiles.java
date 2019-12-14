@@ -5,7 +5,7 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 
 /*
-* Find Pivot Index
+* 937. Reorder Data in Log Files
 * problem url: https://leetcode.com/problems/reorder-data-in-log-files/
 * leetcode profile url:  https://leetcode.com/jamsrandorj/
 * solved by jama
