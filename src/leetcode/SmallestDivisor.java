@@ -6,7 +6,7 @@ package leetcode;
  * leetcode profile url: https://leetcode.com/jamsrandorj/ 
  * solved by jama
  */
-public class SmallesDivisor {
+public class SmallestDivisor {
 	public static void main(String[] args) {
 		System.out.println(smallestDivisor(new int[] { 2, 3, 5, 7, 11 }, 11));
 	}
