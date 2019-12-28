@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.linkedList;
 
 /*
 * Merge Two Sorted Lists

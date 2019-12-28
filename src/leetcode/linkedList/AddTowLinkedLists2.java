@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.linkedList;
 
 /*
 * Add Two Linked Lists numbers
