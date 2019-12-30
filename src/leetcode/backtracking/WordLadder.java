@@ -24,7 +24,6 @@ public class WordLadder {
 	}
     
 	public static int ladderLength(String beginWord, String endWord, List<String> wordList) {
-        List<List<String>> result = new ArrayList<List<String>>();
         HashSet<String> hSet = new HashSet<>();
         for(String s : wordList) hSet.add(s);
         
@@ -32,16 +31,15 @@ public class WordLadder {
         
         int[] minPath = new int[1];
         minPath[0] = Integer.MAX_VALUE;
-        dfs(beginWord, endWord, hSet, result, new ArrayList<String>(), minPath);
+        dfs(beginWord, endWord, hSet, new ArrayList<String>(), minPath);
         
         return minPath[0] == Integer.MAX_VALUE ? 0 : minPath[0];  
     }
     
-    private static void dfs(String beginWord, String endWord, HashSet<String> wordSet, List<List<String>> result, List<String> tempResult, int[] minPath){
+    private static void dfs(String beginWord, String endWord, HashSet<String> wordSet, List<String> tempResult, int[] minPath){
         tempResult.add(beginWord);
         if(beginWord.equals(endWord)) {
             minPath[0] = minPath[0] > tempResult.size() ? tempResult.size() : minPath[0];
-        	result.add(new ArrayList<>(tempResult));
         }
         else{
         	char[] arr = beginWord.toCharArray();
@@ -52,7 +50,7 @@ public class WordLadder {
                     arr[i] = c;
                     String mutatedWord = new String(arr);
                     if(wordSet.contains(mutatedWord) && !tempResult.contains(mutatedWord)){
-                        dfs(mutatedWord, endWord, wordSet, result, tempResult, minPath);
+                        dfs(mutatedWord, endWord, wordSet, tempResult, minPath);
                     }
                     arr[i] = c1;
                 }
