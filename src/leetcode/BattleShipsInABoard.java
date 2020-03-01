@@ -23,6 +23,35 @@ public class BattleShipsInABoard {
 		}
 
 		int ships = 0;
+		for (int i = 0; i < board.length; i++) {
+			for (int j = 0; j < board[0].length; j++) {
+				if (board[i][j] != 'X')
+					continue;
+				sink(board, i, j);
+				ships++;
+			}
+		}
+
+		return ships;
+	}
+
+	private static void sink(char[][] board, int i, int j) {
+		if (i < 0 || i >= board.length || j < 0 || j >= board[i].length || board[i][j] != 'X')
+			return;
+		board[i][j] = '.';
+
+		sink(board, i + 1, j);
+		sink(board, i - 1, j);
+		sink(board, i, j + 1);
+		sink(board, i, j - 1);
+	}
+
+	public static int countBattleshipsEfficient(char[][] board) {
+		if (board == null || board.length == 0) {
+			return 0;
+		}
+
+		int ships = 0;
 		for (int r = 0; r < board.length; r++) {
 			for (int c = 0; c < board[0].length; c++) {
 				if (board[r][c] == 'X' && (r == 0 || board[r - 1][c] != 'X') && (c == 0 || board[r][c - 1] != 'X'))
