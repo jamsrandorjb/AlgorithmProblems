@@ -15,7 +15,30 @@ public class TwoSum {
 		for(int x : twoSum(new int[] {3, 2, 4}, 6)) {
 			System.out.println(x);
 		}
+		for(int x : twoSumFast(new int[] {3, 2, 4}, 6)) {
+			System.out.println(x);
+		}
 	}
+	
+	public static int[] twoSumFast(int[] nums, int target) {
+		int[] result = new int[2];
+        if(nums == null || nums.length < 2)
+            return result;
+        
+        HashMap<Integer, Integer> map = new HashMap<>(nums.length);
+        
+        for(int i = 0; i < nums.length; i++){
+            int targetInt = target - nums[i];
+            if(map.containsKey(targetInt) && map.get(targetInt) != i){
+                result[0] = i;
+                result[1] = map.get(targetInt);
+                return result;
+            }
+            map.put(nums[i], i);
+        }
+        
+        return result;         
+    }
 	
 	public static int[] twoSum(int[] nums, int target) {
         int[] returnList = new int[2];
