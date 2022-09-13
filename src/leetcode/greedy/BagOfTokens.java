@@ -15,31 +15,31 @@ public class BagOfTokens {
 		System.out.println(bagOfTokensScore(new int[] { 100 }, 50));
 	}
 
-	public static int bagOfTokensScore(int[] tokens, int P) {
+	public static int bagOfTokensScore(int[] tokens, int power) {
 		int points = 0;
-		int maxPoints = 0;
+		int result = 0;
 		int i = 0;
 		int j = tokens.length - 1;
 
 		Arrays.sort(tokens);
 
 		while (i <= j) {
-			if (P >= tokens[i]) {
+			if (power >= tokens[i]) {
 				points++;
-				P -= tokens[i];
+				power -= tokens[i];
 				i++;
-				maxPoints = Math.max(maxPoints, points);
+				result = Math.max(result, points);
 				continue;
 			}
-			if (points > 0) {
-				points--;
-				P += tokens[j];
-				j--;
-				continue;
+			if (points == 0)
+			{
+				break;
 			}
-			return maxPoints;
+			points--;
+			power += tokens[j];
+			j--;
 		}
 
-		return maxPoints;
+		return result;
 	}
 }
