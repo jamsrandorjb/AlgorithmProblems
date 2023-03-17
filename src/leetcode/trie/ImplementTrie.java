@@ -12,11 +12,11 @@ import java.util.HashMap;
 public class ImplementTrie {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Trie trie = new Trie();
+        // TODO Auto-generated method stub
+        Trie trie = new Trie();
         trie.insert("apple");
         System.out.println(trie.search("apple"));
-        
+
 	}
 
 	class Trie {
