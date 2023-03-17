@@ -16,6 +16,7 @@ public class ImplementTrie {
 		Trie trie = new Trie();
         trie.insert("apple");
         System.out.println(trie.search("apple"));
+        
 	}
 
 	class Trie {
