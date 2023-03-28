@@ -16,7 +16,6 @@ public class MinCostTickets {
         Set<Integer> set = new HashSet<>();
         for(int d: days) set.add(d);
         for(int i = 365; i >= 1; i--) {
-            
             if(!set.contains(i)) {
                 dp[i] = dp[i+1];
                 continue;
