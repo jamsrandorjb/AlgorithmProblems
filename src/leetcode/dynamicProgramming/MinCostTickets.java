@@ -12,28 +12,19 @@ public class MinCostTickets {
 	}
 
 	public static int mincostTickets(int[] days, int[] costs) {
-		int[] memo = new int[days[days.length - 1] + 1];
-		boolean[] travel = new boolean[days[days.length - 1] + 1];
-		for (int i : days)
-			travel[i] = true;
+		int[] dp = new int[365 + 30 + 1];
+        Set<Integer> set = new HashSet<>();
+        for(int d: days) set.add(d);
+        for(int i = 365; i >= 1; i--) {
+            
+            if(!set.contains(i)) {
+                dp[i] = dp[i+1];
+                continue;
+            }
+            dp[i] = Math.min(dp[i+7] + costs[1], dp[i+1] + costs[0]);
+            dp[i] = Math.min(dp[i], dp[i+30] + costs[2]);
+        }
 
-		return dp(memo, travel, costs, days[days.length - 1]);
-	}
-
-	private static int dp(int[] memo, boolean[] travel, int[] costs, int day) {
-		if (day <= 0)
-			return 0;
-		if (!travel[day])
-			return dp(memo, travel, costs, day - 1);
-		if (memo[day] != 0)
-			return memo[day];
-
-		int one = dp(memo, travel, costs, day - 1) + costs[0];
-		int seven = dp(memo, travel, costs, day - 7) + costs[1];
-		int thirty = dp(memo, travel, costs, day - 30) + costs[2];
-
-		memo[day] = Math.min(Math.min(one, seven), thirty);
-
-		return memo[day];
+        return dp[1];
 	}
 }
