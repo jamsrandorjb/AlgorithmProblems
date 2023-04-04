@@ -3,7 +3,7 @@ from typing import List
 
 #881. Boats to Save People
 #problem url: https://leetcode.com/problems/boats-to-save-people/
-#hackerrank profile url:  https://www.hackerrank.com/jamsrandorjb
+#leetcode profile url:  https://leetcode.com/jamsrandorj/
 #solved by jama
 class Solution:
     def __init__(self):

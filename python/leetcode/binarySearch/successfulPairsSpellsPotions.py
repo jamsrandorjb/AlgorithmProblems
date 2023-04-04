@@ -3,7 +3,7 @@ from typing import List
 
 #2300. Successful Pairs of Spells and Potions
 #problem url: https://leetcode.com/problems/successful-pairs-of-spells-and-potions/
-#hackerrank profile url:  https://www.hackerrank.com/jamsrandorjb?hr_r=1
+#leetcode profile url:  https://leetcode.com/jamsrandorj/
 #solved by jama
 class Solution:
     def __init__(self):
