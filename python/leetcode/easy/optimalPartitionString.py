@@ -8,18 +8,15 @@ class Solution:
         
     def partitionString(self, s: str) -> int:
         seen = set()
-        N = len(s)
         result = 0
 
-        for i in range(N):
-            if s[i] not in seen:
-                seen.add(s[i])
-                continue
-            result += 1
-            seen.clear()
-            seen.add(s[i])
+        for c in s:
+            if c in seen:
+                result += 1    
+                seen.clear()
+            seen.add(c)
 
-        return result + 1
+        return result + 1 #the last set of chars
         
 test = Solution()
 print(test.partitionString('abacaba'))   
